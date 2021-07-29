@@ -1,7 +1,7 @@
 import sys
 from time import sleep
 
-def progreso(items, total, ancho=20):
+def progreso(items, total, ancho: int = 20):
 	barra_full = int(round(ancho * items/ float(total)))
 	porcentaje = round(100 * items / float(total), 1)
 	barra = '=' * barra_full + '-' * (ancho - barra_full)
