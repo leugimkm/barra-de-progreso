@@ -1,12 +1,14 @@
 import sys
 from time import sleep
 
+
 def progreso(items, total, ancho: int = 20):
 	barra_full = int(round(ancho * items/ float(total)))
 	porcentaje = round(100 * items / float(total), 1)
 	barra = '=' * barra_full + '-' * (ancho - barra_full)
 	sys.stdout.write(f'\rProgreso: [{barra}] {porcentaje:.0f}% Completado\r')
 	sys.stdout.flush()
+
 
 def test():
     procesos = 50
@@ -16,4 +18,6 @@ def test():
     sys.stdout.write('\n')
     print('Fin')
 
-test()
+
+if __name__ == "__main__":
+    test()
